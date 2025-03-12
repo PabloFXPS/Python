@@ -1,0 +1,136 @@
+22crie um programa que leia o nome completo de uma pessoa e mostre:
+
+x o nome com todas as letras minúsculos
+
+x todas maiúsculas
+
+quantas letras no total sem considerar espaços
+
+quantas letras tem o primeiro nome
+
+
+23 faça um programa que leia um numero de 0 a 9999 e mostre na tela cada um dos dígitos separados
+
+ex: 1234
+
+1 unidades
+2 dezenas
+3 centenas
+4 milhar
+
+24 crie um programa que leia o nome de uma cidade e diga se ele começa ou não com "santo"
+
+25 crie um programa que leia o nome de uma pessoa e diga se tem silva no nome
+
+26 faça um programa que leia uma frase e mostre : quantas vezes aparece a letra "A" em posição ela parece em primeiro e quando ela aparece em ultimo
+
+27 faça um programa que leia o nome de uma pessoa completo e mostre o primeiro e ultimo nome
+
+ex > ana maria de Souza
+primeiro > ana 
+ultimo > souza 
+
+28 escreva um programa que faça o computador escolher um numero de 0 a 5 e paça para o usuario tentar descobrir qual foi o numero escolhido. O programa deverá escrever na tela se o usuario venceu ou perdeu
+
+29 escreva um programa que leia a velocidade de um carro. Se ele utrapassar 80km/h, mostre uma mensagem dizendo que ele foi multado. A multa custa R$7.00
+
+30 crie um programa que leia um numero inteiro e mostre se ele é impar ou par.
+
+31 desenvolva um programa que pergunte a distancia de uma viagem em km. Calcule o preço da passagem, cobrando R$0,5 por KM até 200KM e para viagens mais longas 0.45
+
+32 faça um programa que leia um ano qualquer e mostre se ele é bisexto.
+
+33 faça um programa que leia tres numeros e mostre qual é o maior e qual o menor.
+
+34 escreva um programa que pergunte o salario de um funcionario e calcule o valor do seu aumento. Para superior a R$1.250,00 aumento de 10%. Para inferiores ou iguais é de 15%.
+
+35 desenvolva um programa que leia o comprimento de tres retas e diga ao usuario se elas podem ou não formar um triangulo.
+
+36 escreva um programa para aprovar o empréstimo bancário para a compra de uma casa.
+O programa vai perguntar o valor da casa, salario e quantos anos ele vai pagar.
+Calcule o valor da prestação mensal, sabendo que ela não pode exceder 30% do salario ou então o empréstimo será negado.
+
+37 escreva um programa que leia um numero inteiro qualquer e peça para o usuario escolher qual será a base de conversão.
+1-binario 2-octal 3-hexadecimal
+
+38 escreva que leia dois numero inteiro e compare-os, mostrando na tela uma mensagem:
+- o primeiro valor é maior/-o segundo valor é maior/-não existe valor maior, os dois são iguais.
+
+39 faça um programa que leia o ano de nascimento de um jovem e informe, de acordo com sua idade:
+-se ele ainda vai se alistar ao serviço militar/- se é a hora de se alistar/- se ja passou do tempo.
+Seu programa deverá mostrar o tempo que falta ou que ja passou do prazo.
+
+40 crie um programa que leia duas notas de um aluno e calcule sua média. mostrando uma mensagem no final, de acordo com a media atingida:
+-abaixo de 5.0 REPROVADO/-entre 5.0 e 6.9 RECUPERAÇÃO/-7+ APROVADO.
+
+41 a confederação Nacional de natação precisa de um programa que leia o ano de nascimento de um atleta e mostre sua categoria de acordo com a idade:
+Até 9 anos: mirim/14 infantil/19 junior/20 senior/+master
+
+42 refaça o desafio 35 dos triangulos acrescentando o recurso de mostrar o tipo de triangulo:
+Equilátero: Todos os lados iguais.
+Isosceles: dois lados iguais.
+escaleno: todos diferentes.
+
+43 desenvolva uma logica que leia o peso e altura de uma pessoa, calcule seu imc e mostre seus status, de acordo com a tabela:
+- 18.5: abaixo do peso.
+- 18.5 a 25: peso ideal.
+- 25 a 30: sobrepeso.
+- 30 a 40: obesidade. 
+- acima de 40: obesidade mórbida.
+
+44 elabore um programa que calcule o valor a ser pago por um produto, considerando o seu preço normal e condição de pagamento:
+-à vista dinheiro/cheque: 10% de desconto.
+-à vista no cartão: 5% de desconto.
+-em até 2x no cartão: preço normal.
+-3x ou mais no cartão: 20% de juros.
+
+45 crie um programa que faça o computador jogar jokenpô com você.
+
+46 faça um programa que mostre a contagem regressiva para o estouro de fogos de artificio. 
+10 até 0 com pausa de 1s entre eles.
+
+47 crie um programa que mostre na tela todos os numeros pares que estão no intervalo de 1 até 50
+
+48 faça um programa que calcule a soma entre todos os numeros impares que são multiplos de 3 e que se encontram entre 1 até 500.
+
+49 refaça o desafio 9 com laços de repetição
+
+50 desenvolva um programa que leia 6 numeros inteiros e mostre a soma apenas daquels que forem pares. se o valor foir impar desconsidera.
+
+51 desenvolva um programa que leia o primeiro termo e a razao de uma pa e mostre os 10 primeiros termos dessa progressao
+
+52 faça um programa que leia um numero inteiro e diga se ele é ou nao um numero primo
+
+53 crie um programa que leia uma frase qualquer e diga se ela é um palindromo desconsiderando os espaços.
+
+54 crie um programa que leia o ano de nascimento de sete pessoas. No final mostre quantas são maior de idade e quem é menor (21 anos)
+
+55 faça um programa que leia o peso de cinco pessoas. no final mostre qual foi o maior e qual o menor.
+
+56 desenvolva um programa que leia o nome,idade e sexo de 4 pessoas. No final do programa mostre :
+-media de idade
+-qual o homem mais velho
+-quantas mulheres tem menos de 20 anos 
+
+57 faça um programa que leia o sexo de uma pessoa, mas só aceita os valores'M'ou'F'. Se errado peça para digitar dnv.
+
+58 refazer o desafio 28. só que agora o loop vai até ele acertar.
+
+59 crie um programa que leia o valores e no menu mostre 
+[1]Somar
+[2]Multiplicar
+[3]maior
+[4]novos numeros
+[5]Sair do programa
+
+60 leia o numero e faz o fatorial. Ex 5!=5X4X3X2X1=120
+
+61 Refaça o desafio 51. lendo o primeiro termo e a razão de uma PA, mostrando os 10 primeiros termos.
+
+62 melhore o 61. só que agora ele vai poder mostrar mais X termos, encerra quando o usuario digita 0 nos termos.
+
+63 escreva um programa que leia um numero n inteiro qualquer e mostre na tela os n primeiros elementos de uma seguencia de fibonacci.
+
+64 crie um programa que leia varios numeros inteiros, mostre quantos numeros foram digitados e qual foi a soma entre eles. Encerra quando digita 999.
+
+65 crie um programa que leia varios numeros inteiros, mostre a media, maior e menor. O programa pergunte se ele quer ou nao parar.
