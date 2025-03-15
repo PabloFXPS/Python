@@ -74,13 +74,67 @@ while cont > 0:
 print(f'{ftr}')'''
 
 #61 Refaça o desafio 51. lendo o primeiro termo e a razão de uma PA, mostrando os 10 primeiros termos.
-print ("Progressão aritmetica")
+'''print ("Progressão aritmetica")
 pm = int(input("Qual é o primeiro termo: "))
 rz = int(input ("Qual é a razão: "))
 qtt = int(input("Qual a quantidade de termos que você quer ver: "))
 cont = 0
-print(f"Resultado é:",end=" ")
+print("Resultado é:",end=" ")
 while cont != qtt:
     termos = pm + cont *rz
     cont += 1
-    print (f"{termos} ", end="")
+    print (f"{termos} ", end="")'''
+
+#62 melhore o 61. só que agora ele vai poder mostrar mais X termos, encerra quando o usuario digita 0 nos termos.
+'''print ("Progressão aritmetica 2.0")
+pm = int (input("Qual é o primeiro termo: "))
+rz = int (input("Qual a razao: "))
+qtt = int(input("Quantos termos você quer ver: "))
+termo = pm
+mais = qtt
+total = 0
+print(f"{pm}: ",end="")
+while mais != 0: 
+    cont = 0
+    while cont < mais:
+        termo += rz
+        print (f"{termo}", end="-"if cont < mais - 1 else "")
+        cont +=1
+        total +=1
+    mais = int(input("\nQuer ver mais quantos termo ? 0 Para encerrar.\nResposta:"))
+print(f"\nEncerrado. A quantidade de termos mostrado foi: {total}")'''
+
+#63 escreva um programa que leia um numero n inteiro qualquer e mostre na tela os n primeiros elementos de uma seguencia de fibonacci.
+'''print (5*"=","Sequencia de Fibonacci","="*5)
+
+termos=int(input("\nQuantos termos você quer ver: "))
+cont = 1
+t1 = 1
+t2 = 1
+print(f"{t1}-{t2}",end="-")
+while cont != termos:
+    t3 = t1 + t2
+    t1 = t2
+    t2 = t3
+    print(f"{t3}",end="-")
+    cont +=1
+print("Fim")'''
+#Mostrar mais termos.
+'''print (5*"=","Sequencia de Fibonacci","="*5)
+
+termos=int(input("\nQuantos termos você quer ver: "))
+cont = 0
+t1 = 1
+t2 = 1
+mais = termos
+print(f"{t1}-{t2}",end="-")
+while mais !=0:
+    cont = 1
+    while cont <= mais:
+        t3 = t1 + t2
+        t1 = t2
+        t2 = t3
+        print(f"{t3}",end="-"if cont <= mais-1 else"-Pausa")
+        cont +=1
+    mais = int(input("\nQuer ver mais termos ? 0 para sair.\nResposta: "))
+print("Encerrado.")'''
