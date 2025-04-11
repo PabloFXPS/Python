@@ -138,3 +138,35 @@ while mais !=0:
         cont +=1
     mais = int(input("\nQuer ver mais termos ? 0 para sair.\nResposta: "))
 print("Encerrado.")'''
+
+
+#64 crie um programa que leia varios numeros inteiros, mostre quantos numeros foram digitados e qual foi a soma entre eles. Encerra quando digita 999.
+'''num = total = cont = 0
+print("Ao digitar um numero ele somará com o anterior. Para encerrar digite 999")
+while num != 999:
+        num = int(input("Numero: "))
+        if num != 999:
+            total += num
+            cont += 1
+print(f"A soma dos {cont} digitados foi = {total}")'''
+
+#65 crie um programa que leia varios numeros inteiros, mostre a media, maior e menor. O programa pergunte se ele quer ou nao parar.
+'''print("Ao digitar um numero e no final o programa mostrara a media, o maior numero e o menor.")
+cont = media = num = total = maior = menor = 0
+resposta = ""
+lista = []
+while resposta != "n":
+    num = int(input("Digite um numero: "))
+    resposta = str(input("Quer continua? [s/n]: ")).lower().strip()[0]
+    if resposta not in 'sn' or num == str:
+        print("Dados incorreto")
+        break
+    lista.append(num)
+    cont +=1
+    total += num
+    if resposta == "n" and cont == 1:
+        print (f"Você só digitou um numero: {lista}") 
+media = total / cont
+if cont >= 2 :print (f"Os numeros digitados foram:{lista}\nMenor numero: {min(lista)}\nMaior numero: {max(lista)}\nMedia: {media}")'''
+
+#da aula
