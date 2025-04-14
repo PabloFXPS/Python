@@ -168,5 +168,3 @@ while resposta != "n":
         print (f"Você só digitou um numero: {lista}") 
 media = total / cont
 if cont >= 2 :print (f"Os numeros digitados foram:{lista}\nMenor numero: {min(lista)}\nMaior numero: {max(lista)}\nMedia: {media}")'''
-
-#da aula

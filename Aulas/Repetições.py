@@ -41,7 +41,7 @@
 #     s += n
 # print(f'A somatória dos numeros digitados é: {s}')#Soma dos numeros
 
-'''WHILE'''
+'''WHILE: enquanto a condição for true ele continua'''
 
 # c = 1
 # while c < 10:
@@ -65,3 +65,15 @@
 #         else:
 #             impar +=1
 # print (f"Dos numeros digitados: {par} são par e {impar} impar") 
+
+'''Parar o loop'''
+
+#para colocar um loop infinito use while true:
+
+n = s = 0
+while True:
+    n = int(input("Digite um numero: "))
+    if n == 999:
+        break #< interrompe o loop
+    s += n
+print(f"a soma dos numero deu : {s}")
