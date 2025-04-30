@@ -153,3 +153,25 @@ c)qual o nome do produto mais barato
 
 71 crie um programa que simule o funcionamento de um caixa eletronico. No inicio, pergunte ao usuario qual sera o valor a ser sacado(Int) e o programa vai informar quantos cedulas de cada valor serão entregues.
 considere que o caixa possui cedulas de 50, 20, 10 e 1
+
+72 crie um programa que tenha uma tupla preenchida com uma contagem por extenso, de 0 até 20.
+o programa deverá ler um numero pelo teclado e mostrá-lo por extenso.
+
+73 crie uma tupla com os 20 primeiros colocados da tabela do campeonato Brasileiro de futebol. na ordem de colocação depois mostre:
+a) apenas os 5 primeiros colocados
+b) os ultimos 4 
+c) uma lista em ordem alfabetica
+d) em que posição na tabela esta o time da chapecoense
+
+74 crie um programa que vai gerar cinco numeros aleatorios e colocar em uma tupla. depois o menor e o maior
+
+75 desenvolva um programa que leia quatro valores pelo teclado e guarde-os em uma tupla. no final mostre:
+a)quantas vezes apareceu o valor 9
+b)em que posição foi digitado o primeiro valor 3
+c)quase foram os numero pares
+
+76  crie um programaque tenha uma tupla unica com nomes de produtos e seus respectivos preços na sequencia. 
+no final moestre uma listagem de preço organizando os dados em forma tabular.
+
+77 crie um programa que tenha uma tupla com varios palavras(sem acentos)depois disso, voce deve mostrar para cada palavra quais são suas vogais.
+
