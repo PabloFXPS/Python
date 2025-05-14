@@ -51,3 +51,34 @@ print(f"Maior numero: {maior}\nMenor numero: {menor}")
 # a)quantas vezes apareceu o valor 9
 # b)em que posição foi digitado o primeiro valor 3
 # c)quase foram os numero pares
+'''par=x9 = 0
+num = (int(input("Digite 4 numeros. 1°: ")), (int(input("2°: "))),(int(input("3°: "))), (int(input("4°: "))))
+print (f"=====\nO 9 apareceu {num.count(9)}x")
+if 3 in num:
+    print (f"O primeiro 3 apareceu na posição {num.index(3)+1}")
+else:
+    print("O valor 3 não foi digitado")
+print (f"Os numeros pares foram:", end=" ")
+for cont in num:
+    if cont % 2 == 0:
+        print(f"{cont}", end=" ")'''
+
+
+# 76  crie um programaque tenha uma tupla unica com nomes de produtos e seus respectivos preços na sequencia. 
+# no final moestre uma listagem de preço organizando os dados em forma tabular.
+'''materiais = (
+    "Caderno", 15,
+    "Caneta", 3,
+    "Borracha", 2,
+    "Lápis", 2.5,
+    "Mochila", 80,
+    "Régua", 4,
+    "Apontador", 1.5)
+print("-="*19)
+print(f"{"Lista de preços":^38}")
+print("=-"*19)
+for cont in range(0, len(materiais)):
+    if cont %2 == 0:
+        print (f"{materiais[cont]:.<30}",end="")
+    else:
+        print(f"R${materiais[cont]:>3.2f}")'''
