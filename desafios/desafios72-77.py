@@ -36,11 +36,18 @@ print(f"Onde esta o time da chapecoense:{brasileirao_2019.index("Chapecoense")+1
 '''
 
 # 74 crie um programa que vai gerar cinco numeros aleatorios e colocar em uma tupla. depois o menor e o maior
-
+'''
 from random import sample
+#tupla corretamente Num = (randint(0,10), radint(0,10, +3x)) < para os numeros nao repetir uma o sample. 
 num = sample(range(0,10),5)
 maior = max(num)
 menor = min(num)
-tuplanum = tuple(num)
+tuplanum = tuple(num) #Transforma em uma tupla
 print(f"Lista gerada:{tuplanum}")
 print(f"Maior numero: {maior}\nMenor numero: {menor}")
+'''
+
+# 75 desenvolva um programa que leia quatro valores pelo teclado e guarde-os em uma tupla. no final mostre:
+# a)quantas vezes apareceu o valor 9
+# b)em que posição foi digitado o primeiro valor 3
+# c)quase foram os numero pares
