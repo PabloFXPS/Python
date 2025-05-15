@@ -82,3 +82,15 @@ for cont in range(0, len(materiais)):
         print (f"{materiais[cont]:.<30}",end="")
     else:
         print(f"R${materiais[cont]:>3.2f}")'''
+
+# 77 crie um programa que tenha uma tupla com varios palavras(sem acentos)depois disso, voce deve mostrar para cada palavra quais são suas vogais.
+'''palavras = (
+    "python", "desafio", "programa", "computador", "internet",
+    "teclado", "monitor", "codigo", "algoritmo", "software"
+)
+
+for p in palavras:
+    print(f"\nNa palavra {p} temos: ",end="")
+    for letra in p:
+        if letra.lower() in "aeiou":
+            print(letra,end=" ")'''
