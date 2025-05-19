@@ -1,5 +1,5 @@
 #Començando com as tuplas. (OBS: Durante a execução do programa não é possivel alterar os valores)
-lanchesimples = "Xtudo"
+'''lanchesimples = "Xtudo"
 lanche = "Xtudo","Suco","Refri" #os valores são: 0,1,2. Para mostar basta colocar[0]
 
 print(lanche[0:2] ,"/", lanchesimples)
@@ -20,4 +20,27 @@ print (c.index(5))#mostra a posição (5) a primeira vez se colocar (5, 1) < ele
 
 pessoa = ("Gustavo", 39,"M",99.88)#funciona normal 
 #para apagar a tupla toda é del(pessoa)
-print(pessoa)
+print(pessoa)'''
+
+#Listas[]. Diferente das tuplas elas são mutaveis, da para adicionar e remover itens enquanto o programa roda.
+
+lanche = ["comida 1","comida 2", "comida 3"]
+lanche[3] = "picole" #<- da para adicionar assim, ele entra na posição que foi colocado
+lanche.append("cookie") #<- adiciona no final da lista
+lanche.insert(0,"quente") #<- adiciona na posicição 0 e move o resto para o lado
+
+#APAGAR
+
+del lanche[3] #deleta o item na posição 3
+lanche.pop(3) #deleta o ultimo e da para colocar a posição que vai ser deletado
+lanche.remove("picole") #deleta o "picole" ou parametro que foi passado 
+
+#condição
+if "cookie" in lanche:
+    lanche.remove("cookie")
+
+#criando com a função list
+valores = list(range(4,11)) #4,5,6,7,8,9,10
+valores.sort #ordena do menor para o maior
+valores.sort (reverse=True) #inverte
+len(valores) 
