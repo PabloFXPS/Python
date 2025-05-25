@@ -34,6 +34,7 @@ lanche.insert(0,"quente") #<- adiciona na posicição 0 e move o resto para o la
 del lanche[3] #deleta o item na posição 3
 lanche.pop(3) #deleta o ultimo e da para colocar a posição que vai ser deletado
 lanche.remove("picole") #deleta o "picole" ou parametro que foi passado 
+lanche.clear()
 
 #condição
 if "cookie" in lanche:
@@ -64,3 +65,19 @@ b = a[:]#maneira correta de se copiar. Agora, a e b não são ligado e b pode se
 b[2]=3
 print(f"Lista A: {a}")
 print(f"Lista B: {b}")
+
+#lista dentro de lista
+dados = list()
+pessoas = []
+
+dados.append("Pedro", 25)
+pessoas.append(dados[:])#A lista pessoa vai receber todos os dados da lista dados
+#ou          0    1  -   0    1  -   0     1
+pessoas=[["Pedro",25],["joao",22],["Maria",20]]
+#              0           1            2
+print(pessoas[0][0])#Mostra "Pedro"
+print(pessoas[1][1])#Mostra 22 da lista joao
+print(pessoas[1])#Mostra joao 22
+
+for p in pessoas:
+    print(p[0])
