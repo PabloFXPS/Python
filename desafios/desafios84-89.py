@@ -46,3 +46,29 @@ print(f"\nPares {valores[0]}.\nImpares {valores[1]}.")'''
 
 # Exercício 86 - Crie um programa que declare uma matriz de dimensão 3x3 e preencha com valores lidos pelo teclado.
 # No final, mostre a matriz na tela, com a formatação correta.
+'''matriz = [[0,0,0],[0,0,0],[0,0,0]]
+for l in range(0,3):
+    for c in range(0,3):
+        matriz[l][c] = int(input(f"Digite o valor da coluna [{l}] [{c}]: "))
+print("-="*12)
+
+#Meu resultado
+for p in matriz[0]:
+    print(f"[{p:^4}]",end=" ")
+print("\n")
+for v in matriz[1]:
+    print (f"[{v:^4}]",end=" ")
+print("\n")
+for x in matriz[2]:
+    print (f"[{x:4}]",end=" ")
+
+# #Estilo do curso
+# for l in range(0,3):
+#     for c in range(0,3):
+#         print(f"[{matriz[l][c]:^6}]",end="")
+#     print()'''
+
+# Exercício 87 - Aprimore o desafio anterior, mostrando no final:
+# a) A soma de todos os valores pares digitados.
+# b) A soma dos valores da terceira coluna.
+# c) O maior valor da segunda linha.
