@@ -69,6 +69,36 @@ for x in matriz[2]:
 #     print()'''
 
 # Exercício 87 - Aprimore o desafio anterior, mostrando no final:
+'''par =[]
+spar = soma = 0
+matriz = [[0,0,0],[0,0,0],[0,0,0]]
+for l in range(0,3):
+    for c in range(0,3):
+        matriz[l][c] = int(input(f"Digite o numero da matriz {[l]}{[c]}. R: "))
+        if matriz[l][c] %2 ==0:
+            spar += matriz[l][c] 
+            par.append(matriz[l][c])
+
+print("-="*15)
+for l in range (0,3):
+    for c in range(0,3):
+        print(f"[{matriz[l][c]:^8}]",end="")
+    print()
+print("-="*15)
 # a) A soma de todos os valores pares digitados.
+print(f"A soma dos numeros pares:{par} é: {spar}.")
+
 # b) A soma dos valores da terceira coluna.
+for x in range (0,3):
+    soma += matriz[x][2]
+print(f"A soma da 3° coluna é: {soma}.")
+
 # c) O maior valor da segunda linha.
+maior = max(matriz[1])
+print(f"O maior valor da segunda linha é: {maior}.")'''
+
+# Exercício 88 - Faça um programa que ajude um jogador da MEGA SENA a criar palpites. 
+# O programa vai perguntar quantos jogos serão gerados e vai sortear 6 números entre 1 e 60 para cada jogo, cadastrando tudo em uma lista composta.
+
+from random import sample
+mega = [rand]
