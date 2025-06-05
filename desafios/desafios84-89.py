@@ -99,6 +99,16 @@ print(f"O maior valor da segunda linha é: {maior}.")'''
 
 # Exercício 88 - Faça um programa que ajude um jogador da MEGA SENA a criar palpites. 
 # O programa vai perguntar quantos jogos serão gerados e vai sortear 6 números entre 1 e 60 para cada jogo, cadastrando tudo em uma lista composta.
-
+'''num = list(range(1, 61))
 from random import sample
-mega = [rand]
+from time import sleep
+jogos = int(input("Quantos jogos vc quer sortear ? R:"))
+print("-"*35)
+for x in range(jogos):
+    jogo = sample(num, 6)
+    jogo.sort(reverse=False)
+    print(f"{x+1}° Jogo = {jogo}")
+    sleep(1)'''
+
+# Exercício 89 - Crie um programa que leia nome e duas notas de vários alunos e guarde tudo em uma lista composta. 
+# No final, mostre um boletim contendo a média de cada um e permita que o usuário possa mostrar as notas de cada aluno individualmente.
