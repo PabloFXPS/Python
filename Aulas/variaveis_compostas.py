@@ -1,4 +1,5 @@
-#Començando com as tuplas. (OBS: Durante a execução do programa não é possivel alterar os valores)
+'''Començando com as tuplas. (OBS: Durante a execução do programa não é possivel alterar os valores)'''
+
 lanchesimples = "Xtudo"
 lanche = "Xtudo","Suco","Refri" #os valores são: 0,1,2. Para mostar basta colocar[0]
 
@@ -22,7 +23,9 @@ pessoa = ("Gustavo", 39,"M",99.88)#funciona normal
 #para apagar a tupla toda é del(pessoa)
 print(pessoa)
 
-#Listas[]. Diferente das tuplas elas são mutaveis, da para adicionar e remover itens enquanto o programa roda.
+
+
+'''Listas[]. Diferente das tuplas elas são mutaveis, da para adicionar e remover itens enquanto o programa roda.'''
 
 lanche = ["comida 1","comida 2", "comida 3",'comida 4']
 lanche[3] = "picole" #<- da para adicionar assim, ele entra na posição que foi colocado
@@ -81,3 +84,50 @@ print(pessoas[1])#Mostra joao 22
 
 for p in pessoas:
     print(p[0])
+
+
+'''Dicionarios'''
+
+dados = {'nome':"Pedro",'idade':25}
+print(dados["nome"])
+print(dados["idade"])
+
+#adiciona um novo ELEMENTO
+dados['sexo']= 'M'
+
+#apaga um ELEMENTO eo seu Valor
+del dados['idade']
+
+#ex
+filme ={'titulo':'Star Wars','ano':1977,'diretor':'Georger Lucas'}
+#valores
+print(filme.values()) # <- mostra os VALORES 'Star Wars, 1977, Georger Lucas'
+
+#elementos / chaves
+print(filme.keys()) # <- mostra os Valores titulo, ano, diretor
+
+#tudo junto
+print(filme.items())# <- mostra os valores e os elementos
+
+#laços de repetição 
+for k,v in filme.items():
+    print(f"O {k} é {v}")
+
+#dicionario dentro de lista
+brasil = list()
+estado1= {'uf':'Rio de Janeiro','sigla':'RJ'}
+estado2= {'uf':'São Paulo', 'sigla':'SP'}
+brasil.append(estado1)
+brasil.append(estado2)
+
+print(brasil)
+
+#ex
+estado= dict()
+brasil= list()
+
+for c in range (0,3):
+    estado['uf'] = str(input("Unidade Federativa: "))
+    estado['sigla'] = str(input("Sigla: "))
+    brasil.append(estado.copy) #cria uma copia para nao ficar tudo igual
+print(brasil)
