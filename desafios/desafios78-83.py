@@ -1,6 +1,6 @@
 # Desafio 78: Faça um programa que leia 5 valores numéricos e guarde-os em uma lista.
 # No final, mostre qual foi o maior e o menor valor digitado e as suas respectivas posições na lista.
-'''num = []
+num = []
 for c in range(0,5):
     num.append(int(input(f"Digite o {c+1}° numero: ")))
 print("=-="*11)
@@ -12,12 +12,12 @@ for i,v in enumerate(num):
 print (f"\nO menor valor foi {min(num)} nas posições: ",end="")
 for i,v in enumerate(num):
     if num[i] == min(num):
-        print(i+1,end=" ")'''
+        print(i+1,end=" ")
 
 # Desafio 79: Crie um programa onde o usuário possa digitar vários valores numéricos e cadastre-os em uma lista.
 # Caso o número já exista lá dentro, ele não será adicionado.
 # No final, serão exibidos todos os valores únicos digitados, em ordem crescente.
-'''listanum = list()
+listanum = list()
 numeros = 0
 print("Adicione valores diferente. Caso, o valor ja possua na lista ele nao será colocado.")
 while True:
@@ -33,11 +33,11 @@ while True:
         break
 print("-=-"*12)
 listanum.sort()
-print(f"Os valores digitados foram: {listanum}")'''
+print(f"Os valores digitados foram: {listanum}")
 
 # Desafio 80: Crie um programa onde o usuário possa digitar cinco valores numéricos e cadastre-os em uma lista, já na posição correta de inserção (sem usar o sort()).
 # No final, mostre a lista ordenada na tela.
-'''listnum = []
+listnum = []
 num = 0
 
 for cont in range (0,5): 
@@ -52,7 +52,7 @@ for cont in range (0,5):
                 break
             posição +=1       
 print("-="*12)
-print(f"A sequencia em ordem fica: {listnum}")'''
+print(f"A sequencia em ordem fica: {listnum}")
 
 # Desafio 81: Crie um programa que vai ler vários números e colocar em uma lista.
 # Depois disso, mostre:
@@ -60,7 +60,7 @@ print(f"A sequencia em ordem fica: {listnum}")'''
 # b) A lista de valores, ordenada de forma decrescente.
 # c) Se o valor 5 foi digitado e está ou não na lista.
 
-'''lista = []
+lista = []
 while True:
     lista.append(int(input("Digite um numero: ")))
     reposta =" "
@@ -74,13 +74,13 @@ print(f"A lista em ordem decresente: {lista}")
 if 5 in lista:
     print ("O valor 5 foi digitado na lista.")
 else:
-    print("O valor 5 nao foi digitado.")'''
+    print("O valor 5 nao foi digitado.")
 
 # Desafio 82: Crie um programa que vai ler vários números e colocar em uma lista. 
 # Depois disso, crie duas listas extras que vão conter apenas os valores pares e os valores ímpares digitados, respectivamente.
 # Ao final, mostre o conteúdo das três listas geradas.
 
-'''par =[]
+par =[]
 impar =[]
 listanum = []
 while True:
@@ -97,12 +97,12 @@ for c,valor in enumerate(listanum):
         par.append(valor)
     else:
         impar.append(valor)
-print(f"Os valores {par} são pares.\nOs valores {impar} são impares.")'''
+print(f"Os valores {par} são pares.\nOs valores {impar} são impares.")
 
 # Desafio 83: Crie um programa onde o usuário digite uma expressão qualquer que use parênteses. 
 # Seu aplicativo deverá analisar se a expressão passada está com os parênteses abertos e fechados na ordem correta.
 
-'''expres = []
+expres = []
 ex = str(input("Digite sua expressão ex (a+b): "))
 for x in ex:
     if x == "(":
@@ -112,4 +112,4 @@ for x in ex:
 if "(" in expres:
     print("Expressão invalida.")
 else:
-    print ("Expressão valida.")'''
+    print ("Expressão valida.")

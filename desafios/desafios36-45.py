@@ -1,7 +1,7 @@
 #36 escreva um programa para aprovar o empréstimo bancário para a compra de uma casa.O programa vai perguntar o valor da casa, salario e quantos anos ele vai pagar.
 #Calcule o valor da prestação mensal, sabendo que ela não pode exceder 30% do salario ou então o empréstimo será negado.
 
-'''resp = int(input("Seja bem-vindo ao EmprestimoRapido\nQual seria o motivo para o emprestimo?\n1-Casa\n2-Carro\n3-outros\n"))
+resp = int(input("Seja bem-vindo ao EmprestimoRapido\nQual seria o motivo para o emprestimo?\n1-Casa\n2-Carro\n3-outros\n"))
 
 if resp == 2 or resp ==3:
     print("No momento só estamos trablalhando com emprestimo de Casa.")
@@ -20,13 +20,13 @@ else:
     if PrestM <= Limite:
         print("Emprestivo APROVADO. Nossos mande seus dados para ser feita a verificação de credênciais.")
     else:
-        print("Emprestivo NEGADO.")'''
+        print("Emprestivo NEGADO.")
 
 
 #37 escreva um programa que leia um numero inteiro qualquer e peça para o usuario escolher qual será a base de conversão.
 #1-binario 2-octal 3-hexadecimal
 
-'''print("-----Sistema de converção de numeros-----\n")
+print("-----Sistema de converção de numeros-----\n")
 num=int(input("Digite um numero inteiro: "))
 if num == str or num == float:
     print("Apenas numeros inteiros são validos.")
@@ -42,11 +42,11 @@ elif op == 2:
 elif op == 3:
     resp = hex(num)[2:]
     print ("Seu numero foi{}.\nNa base hexadecimal fica:{}".format(num,resp))
-print ("-"*41)'''
+print ("-"*41)
 
 
 #38 escreva que leia dois numero inteiro e compare-os, mostrando na tela uma mensagem:- o primeiro valor é maior/-o segundo valor é maior/-não existe valor maior, os dois são iguais.
-'''print("Escreva 2 numeros e o computador vai analisar qual é maior o menor ou se são iguais.\n")
+print("Escreva 2 numeros e o computador vai analisar qual é maior o menor ou se são iguais.\n")
 
 n1=float(input("Primeiro numero: "))
 n2=float(input("Segundo numero: "))
@@ -56,14 +56,13 @@ if n1 > n2:
 elif n2 > n1:
     print ("O segundo numero é maior que o primeiro.")
 elif n1 == n2:
-    print("Os 2 numeros são iguais.")'''
-
+    print("Os 2 numeros são iguais.")
 
 # 39 faça um programa que leia o ano de nascimento de um jovem e informe, de acordo com sua idade:
 # -se ele ainda vai se alistar ao serviço militar/- se é a hora de se alistar/- se ja passou do tempo.
 # Seu programa deverá mostrar o tempo que falta ou que ja passou do prazo.
 
-'''from datetime import date
+from datetime import date
 print ("Progama de alistamento obrigatorio.")
 
 nascimento = int(input("Em que ano você nasceu? Exemplo:2009\nResposta: "))
@@ -82,13 +81,13 @@ elif idade > 18:
     elif atraso == 2:
         print("Você esta {} atrasado. Procure se alistar o mais rapido possivel.".format(idade - 18))
     else:
-        print("Opção incorreta.")'''
+        print("Opção incorreta.")
 
 
 #40 crie um programa que leia duas notas de um aluno e calcule sua média. mostrando uma mensagem no final, de acordo com a media atingida:
 #-abaixo de 5.0 REPROVADO/-entre 5.0 e 6.9 RECUPERAÇÃO/-7+ APROVADO.
 
-'''print("Calcule sua media escolar!!")
+print("Calcule sua media escolar!!")
 nota1 = float(input("Nota do 1° semestre: "))
 nota2= float(input("Nota do 2° semestre: "))
 media = (nota1+nota2)/2
@@ -100,12 +99,12 @@ elif media == 5.0 and media < 6.9:
 elif media >= 7.0 and media <= 10:
     print("Sua média foi {}. Aproveita as ferias".format(media))
 else: 
-   print ("Dados inserido de forma incorreta.")'''
+   print ("Dados inserido de forma incorreta.")
 
 # 41 a confederação Nacional de natação precisa de um programa que leia o ano de nascimento de um atleta e mostre sua categoria de acordo com a idade:
 # Até 9 anos: mirim/14 infantil/19 junior/20 senior/+master
 
-'''from datetime import datetime, timedelta
+from datetime import datetime, timedelta
 
 dtatual= datetime.now()
 
@@ -130,7 +129,7 @@ elif(idade == 20):
 elif (idade > 20):
     print (f"Como você tem {idade}, vai participar da categoria: Master.")
 elif (idade < 9):
-    print("Você não tem a idade minima.")'''
+    print("Você não tem a idade minima.")
 
 # 42 refaça o desafio 35 dos triangulos acrescentando o recurso de mostrar o tipo de triangulo:
 # Equilátero: Todos os lados iguais.
@@ -138,7 +137,7 @@ elif (idade < 9):
 # escaleno: todos diferentes.
 
 
-'''print ("Digite 3 lados para saber se é possivel fazer um triangulo e seus tipos.")
+print ("Digite 3 lados para saber se é possivel fazer um triangulo e seus tipos.")
 r1 = float(input("Digite o primeiro numero: "))
 r2 = float(input("\nDigite o segundo numero: "))
 r3 = float(input("\nDigite o terceiro numero: "))
@@ -152,7 +151,7 @@ if (r2-r3)<r1<(r1+r3) and (r1-r3)<r2<(r1+r3) and (r1-r2)<r3<(r1+r2):
     else:
         print("Seu triangulo é: escaleno")
 else:
-    print("\nNão é possivel fazer um triangulo com esses valores.")'''
+    print("\nNão é possivel fazer um triangulo com esses valores.")
 
 
 # 43 desenvolva uma logica que leia o peso e altura de uma pessoa, calcule seu imc e mostre seus status, de acordo com a tabela:
@@ -162,7 +161,7 @@ else:
 # - 30 a 40: obesidade. 
 # - acima de 40: obesidade mórbida.
 
-'''print ("-_"*5,"Calculadora de IMC","_-"*5)
+print ("-_"*5,"Calculadora de IMC","_-"*5)
 
 peso = float(input("Para começarmos informe seu peso e altura.\nPeso Kg: "))
 altura = float(input("Altura: "))
@@ -179,7 +178,7 @@ elif 25 > imc <= 30:
 elif  30 > imc <= 40:
          print ("Indice: obesidade")
 elif imc > 40:
-          print ("Indice: obesidade morbida")''' 
+          print ("Indice: obesidade morbida") 
 
 
 # 44 elabore um programa que calcule o valor a ser pago por um produto, considerando o seu preço normal e condição de pagamento:
@@ -188,7 +187,7 @@ elif imc > 40:
 # -em até 2x no cartão: preço normal.
 # -3x ou mais no cartão: 20% de juros.
 
-'''print("=-="*20)
+print("=-="*20)
 
 valor = float(input("Insira o valor total das compras do cliente.\nR$: "))
 
@@ -211,11 +210,11 @@ elif pagamento == 2: #cartão
             if cred >= 3:
                 juros = valor + ((20/100)*valor)
                 print(f"Com as taxas da maquina o valor foi para R$ {juros}.\nValor por parcela: R$ {juros/cred}.")
-print("=-="*20)'''
+print("=-="*20)
 
 #45 crie um programa que faça o computador jogar jokenpô com você.
 
-'''from random import randint
+from random import randint
 
 comput = randint(1,3)
 
@@ -235,41 +234,41 @@ elif jogador == 3 and comput ==1:
     print("\nVocê ganhou !!!")
 else:
     print("\nVocê perdeu.")
-print("=-="*23)'''
+print("=-="*23)
 
 #outro modo
 
-# from random import randint
-# from time import sleep
+from random import randint
+from time import sleep
 
-# itens = ('Pedra','Papel','Tesoura')
-# comput = randint (0,2)
-# print(''' Tente ganhar da maquina no JOKENPÔ !!!!
-# Suas opções:
-# [0]Pedra
-# [1]Papel
-# [2]Tesoura''')
-# jogador = int(input("Qual sua jogada: "))
+itens = ('Pedra','Papel','Tesoura')
+comput = randint (0,2)
+print(''' Tente ganhar da maquina no JOKENPÔ !!!!
+Suas opções:
+[0]Pedra
+[1]Papel
+[2]Tesoura''')
+jogador = int(input("Qual sua jogada: "))
 
-# if 0 < jogador > 2:
-#     print("Opção invalida")
-# else:
-#     print("JO")
-#     sleep(1)
-#     print("KEN")
-#     sleep(1)
-#     print ("PÔ")
-#     sleep(1)
+if 0 < jogador > 2:
+    print("Opção invalida")
+else:
+    print("JO")
+    sleep(1)
+    print("KEN")
+    sleep(1)
+    print ("PÔ")
+    sleep(1)
 
-#     print(f"\nVocê escolheu {itens[jogador]} e o computador {itens[comput]}. ")
+    print(f"\nVocê escolheu {itens[jogador]} e o computador {itens[comput]}. ")
 
-#     if jogador == comput:
-#         print("Empate!!")
-#     elif jogador == 0 and comput == 2:
-#         print("Você ganhou!!!") 
-#     elif jogador == 1 and comput == 0:
-#         print("Você ganhou!!!")
-#     elif  jogador == 2 and comput == 1:
-#         print("Você ganhou!!!")
-#     else:
-#         print("Você perdeu :(")
+    if jogador == comput:
+        print("Empate!!")
+    elif jogador == 0 and comput == 2:
+        print("Você ganhou!!!") 
+    elif jogador == 1 and comput == 0:
+        print("Você ganhou!!!")
+    elif  jogador == 2 and comput == 1:
+        print("Você ganhou!!!")
+    else:
+        print("Você perdeu :(")

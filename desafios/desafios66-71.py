@@ -1,5 +1,5 @@
 #66 crie um programa que leia varios numeros inteiros pelo teclado. O programa so vai para quando o usuario digitar o valor 999, que é a condição de parada. No final mostre a quantidade de numeros digitados e a soma deles (desconsiderando o 999).
-'''soma = cont = 0
+soma = cont = 0
 while True:
     num = int(input("Digite um numero [para encerrar digite 999]: "))
     if num == 999:
@@ -7,10 +7,10 @@ while True:
     else:
         cont += 1
         soma += num
-print (f"Quantidade de numeros: {cont}.\nSoma de todos : {soma}.")'''
+print (f"Quantidade de numeros: {cont}.\nSoma de todos : {soma}.")
 
 #67 faça um programa que mostre a tabua de varios numeros, um de cada vez para cada valor digitado pelo usuario. O programa sera interrompido quando o numero for negativo.
-'''cont = 0 
+cont = 0 
 while True:
     num = int(input("De qual numero vc deseja ver a tabuada. Digite um numero negativo para encerrar: "))
     if num > 0:
@@ -20,10 +20,10 @@ while True:
         print("="*20)
     else:
         print("Fim")
-        break'''
+        break
 
 #68 faça um programa que joguei par e impar. O jogo para quando o jogador perder e no final mostre sua seguencia de vitoria.
-'''from random import randint
+from random import randint
 seq = 0
 print("Tente ganhar da maquina no par ou impar\n")
 while True:
@@ -44,13 +44,13 @@ while True:
         else:
             print(f"\nVocê perdeu.\nSua escolha {user} a do computador {cp} total de {soma}.")
             break
-print(f"Sua sequencia de vitorias foi: {seq}")'''
+print(f"Sua sequencia de vitorias foi: {seq}")
 
 # 69 crie um programa que leia a idade e sexo de cada pessoa. No final mostre se quer ou nao continuar e
 # a)quantas pessoas tem +18
 # b)quantos homens foram cadastrado
 # c)quantas mulheres com -20
-'''cont = 1
+cont = 1
 maior = homens = mulheres = 0
 while True:
     print("=-="*7,f"\nCadatre a {cont}° pessoa")
@@ -73,7 +73,7 @@ while True:
     cont +=1
     if escolha == "N":
         break
-print (f"\nDos cadastros fornecidos:\nQuantos são maiores de 18: {maior}.\nQuando Homens foram cadastrado: {homens}.\nQuantas mulheres menores de 20: {mulheres}.")'''
+print (f"\nDos cadastros fornecidos:\nQuantos são maiores de 18: {maior}.\nQuando Homens foram cadastrado: {homens}.\nQuantas mulheres menores de 20: {mulheres}.")
 
 # 70 crie um programa que leia o nome e o preço de varios produtos. O programa deverá perguntar se o usuario vai continuar e no final, mostre:
 # a)qual é o total gasto na compra x
@@ -81,7 +81,7 @@ print (f"\nDos cadastros fornecidos:\nQuantos são maiores de 18: {maior}.\nQuan
 # c)qual o nome do produto mais barato
 
 
-'''barato = ""
+barato = ""
 cont=caro = menor= total = 0
 print("=-="*7,end="\nLista de compra\n")
 print("=+="*7)
@@ -101,12 +101,12 @@ while True:
         escolha = str(input("Quer continuar [S/N]: ")).strip()[0].upper()
     if escolha == "N":
         break
-print(f"O total dos {cont} produtos é : R${total}\nQuantidade dos produtos acima de R$1000 = {caro}.\nProduto mais barato: {barato}")'''
+print(f"O total dos {cont} produtos é : R${total}\nQuantidade dos produtos acima de R$1000 = {caro}.\nProduto mais barato: {barato}")
 
 
 #71 crie um programa que simule o funcionamento de um caixa eletronico. No inicio, pergunte ao usuario qual sera o valor a ser sacado(Int) e o programa vai informar quantos cedulas de cada valor serão entregues.
 #considere que o caixa possui cedulas de 50, 20, 10 e 1
-'''c=v=d=u= 0
+c=v=d=u= 0
 cinq=50
 total = int
 valor = int(input("Qual o valor que você quer sacar ?\nColoque apenas numeros inteiros\nSaque: R$"))
@@ -129,4 +129,4 @@ while True:
 print (f"Notas de cinqunta: {c}" if c > 0 else "")
 print(f"Notas de vinte: {v}"if v >0 else"")
 print(f"Notas de Dez: {d}" if d>0 else "")
-print (f"Notas de um:{u}"if u>0 else "")'''
+print (f"Notas de um:{u}"if u>0 else "")
