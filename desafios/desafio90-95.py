@@ -19,10 +19,10 @@ else:
     print("Dados incorretos.")'''
 
 # Exercício 91 - Jogo de Dados em Python
-# # Crie um programa onde 4 jogadores joguem um dado e tenham resultados aleatórios.
+# Crie um programa onde 4 jogadores joguem um dado e tenham resultados aleatórios.
 # Guarde esses resultados em um dicionário. No final, coloque esse dicionário em ordem,
 # sabendo que o vencedor tirou o maior número no dado.
-from time import sleep
+'''from time import sleep
 from random import randint
 from operator import itemgetter
 jogadores = {'j1': randint(1,6),
@@ -38,9 +38,26 @@ print("Rank")
 rank = sorted(jogadores.items(), key=itemgetter(1), reverse=True)
 for v,i in enumerate(rank):
     print(f"O {i[0]} ficou e em {v+1}° com o numero : {i[1]}.")
-    sleep(1)
+    sleep(1)'''
 
 # Exercício 92 - Cadastro de Trabalhador em Python
 # Crie um programa que leia nome, ano de nascimento e carteira de trabalho e cadastre-os (com idade) em um dicionário.
 # Se por acaso a CTPS for diferente de ZERO, o dicionário receberá também o ano de contratação e o salário.
 # Calcule e acrescente, além da idade, com quantos anos a pessoa vai se aposentar.
+from datetime import datetime
+cadastro = {}
+cadastro['Nome'] = str(input("Nome: "))
+date = int(input("Ano de nascimento: "))
+cadastro['Anos'] = datetime.now().year - date
+cadastro['CDT'] =  int(input("Numero da Carteira de trabalho. Caso, não tenha digite 0. R: "))
+if cadastro['CDT'] == 0:
+    print()
+    for i,v in cadastro.items():
+        print(f"{i}: {v}")
+else:
+    cadastro['Contratado'] = int(input("Ano de contratação: "))
+    cadastro['Salario'] = float(input("Digite seu salario: ")) 
+    cadastro['Aposentadoria'] = cadastro['Anos'] + ((cadastro['Contratado'] + 35) - datetime.now().year)
+    print()
+    for i,v in cadastro.items():
+        print(f"{i}: {v}")
