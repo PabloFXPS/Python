@@ -44,7 +44,7 @@ for v,i in enumerate(rank):
 # Crie um programa que leia nome, ano de nascimento e carteira de trabalho e cadastre-os (com idade) em um dicionário.
 # Se por acaso a CTPS for diferente de ZERO, o dicionário receberá também o ano de contratação e o salário.
 # Calcule e acrescente, além da idade, com quantos anos a pessoa vai se aposentar.
-from datetime import datetime
+'''from datetime import datetime
 cadastro = {}
 cadastro['Nome'] = str(input("Nome: "))
 date = int(input("Ano de nascimento: "))
@@ -60,4 +60,38 @@ else:
     cadastro['Aposentadoria'] = cadastro['Anos'] + ((cadastro['Contratado'] + 35) - datetime.now().year)
     print()
     for i,v in cadastro.items():
-        print(f"{i}: {v}")
+        print(f"{i}: {v}")'''
+    
+# Exercício 93 - Cadastro de Jogador de Futebol
+# Crie um programa que gerencie o aproveitamento de um jogador de futebol.
+# O programa vai ler o nome do jogador e quantas partidas ele jogou.
+# Depois vai ler a quantidade de gols feitos em cada partida.
+# No final, tudo isso será guardado em um dicionário, incluindo o total de gols feitos durante o campeonato.
+'''partidas = list()
+jogador = dict()
+jogador['Nome'] = str(input("Digite o Nome do jogador: "))
+jogador['jogos'] = jogos = int(input("Quantos jogos ele jogou: "))
+if jogos == 0:
+    print(f"O {jogador['Nome']} não jogou nem um dos jogos.")
+else:
+    for x in range(jogos):
+        partidas.append(int(input(f"Quandos gols na {x+1}°: ")))
+    jogador['gols'] = partidas[:] 
+    jogador['total'] = sum(partidas)
+    print("-="*20)
+    print(jogador)
+    print("=-"*20)
+    for i,v in jogador.items():
+        print(f"O campo {i} tem o valor {v}.")
+    print("=="*20)
+    print(f"O jogador {jogador["Nome"]} jogou {jogos}.")
+    for i,v in enumerate(jogador["gols"]) :
+        print(f"Na partida {i} e fez {v} gols.")'''
+
+#Exercício 94 - Unindo Dicionários e Listas
+#Crie um programa que leia nome, sexo e idade de várias pessoas, guardando os dados de cada pessoa em um dicionário, e todos os dicionários em uma lista.
+#No final, mostre:
+#A) Quantas pessoas foram cadastradas
+#B) A média de idade do grupo
+#C) Uma lista com todas as mulheres
+#D) Uma lista de pessoas com idade acima da média
