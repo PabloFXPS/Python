@@ -95,3 +95,51 @@ else:
 #B) A média de idade do grupo
 #C) Uma lista com todas as mulheres
 #D) Uma lista de pessoas com idade acima da média
+pessoas = dict()
+cadastros = list()
+contador = 0
+tidade = 0
+
+while True:
+    pessoas.clear()
+    print(f"Cadastro N° {contador+1}.\n")
+    pessoas["Nome"] = str(input("Nome: "))
+    pessoas["Masculidade"] = " "
+
+    while pessoas["Masculidade"] not in "MF":
+        pessoas["Masculidade"] = str(input("Masculidade [M/F]: ")).strip().upper()[0]
+        if pessoas["Masculidade"] not in "MF":
+            print("Erro! Tente novamente.")
+    continuar = " "
+    pessoas["Idade"] = int(input("Idade: "))
+    contador +=1
+    tidade += pessoas["Idade"]
+    cadastros.append(pessoas.copy())
+    print()
+
+    while continuar not in "SN":
+        continuar = str(input("Quer continuar [S/N]: ")).strip().upper()[0]
+        if continuar not in "SN":
+            print("Erro! Tente novamente.")
+
+    if continuar == "N":
+        break
+    print("-="*15)
+print("--"*15)
+
+print(f"Quantidade de pessoas: {contador}.")
+print(f"Media de idade: {tidade/contador:.2f}.")
+
+print(f"Mulheres: ",end="")
+for pessoa in cadastros:
+    if pessoa["Masculidade"] == "F":
+        print(pessoa["Nome"],end=" ")
+
+print(f"\nPessoas acima da idade de idade {tidade/contador:.2f}: ")
+for pessoa in cadastros:
+    if pessoa["Idade"] > (tidade/contador):
+        print(f"Nome:{pessoa["Nome"]} -> Idade:{pessoa["Idade"]}")
+
+# Exercício 95 - Aprimorando os Dicionários
+# Aprimore o desafio 93 para que ele funcione com vários jogadores, incluindo um sistema de visualização de detalhes do aproveitamento de cada jogador.
+# O programa deverá permitir que o usuário cadastre vários jogadores e, depois da listagem, possa mostrar os dados de aproveitamento de cada jogador individualmente.

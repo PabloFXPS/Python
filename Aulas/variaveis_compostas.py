@@ -129,5 +129,5 @@ brasil= list()
 for c in range (0,3):
     estado['uf'] = str(input("Unidade Federativa: "))
     estado['sigla'] = str(input("Sigla: "))
-    brasil.append(estado.copy) #cria uma copia para nao ficar tudo igual
+    brasil.append(estado.copy()) #cria uma copia para nao ficar tudo igual
 print(brasil)
