@@ -2,7 +2,7 @@
 # Faça um programa que leia nome e média de um aluno, guardando também a situação em um dicionário.
 # No final, mostre o conteúdo da estrutura na tela.
 
-'''aluno = dict()
+aluno = dict()
 aluno['nome'] = str(input("Qual o nome do aluno ? R: "))
 aluno['Nota 1'] = float(input("Qual a primeira nota ? R: "))
 aluno["Nota 2"] = float(input("Qual a segunda nota ? R: "))
@@ -16,13 +16,13 @@ if 6 <= media < 11:
 elif 0 <= media <6:
     print ("Recuperação.")
 else:
-    print("Dados incorretos.")'''
+    print("Dados incorretos.")
 
 # Exercício 91 - Jogo de Dados em Python
 # Crie um programa onde 4 jogadores joguem um dado e tenham resultados aleatórios.
 # Guarde esses resultados em um dicionário. No final, coloque esse dicionário em ordem,
 # sabendo que o vencedor tirou o maior número no dado.
-'''from time import sleep
+from time import sleep
 from random import randint
 from operator import itemgetter
 jogadores = {'j1': randint(1,6),
@@ -38,13 +38,13 @@ print("Rank")
 rank = sorted(jogadores.items(), key=itemgetter(1), reverse=True)
 for v,i in enumerate(rank):
     print(f"O {i[0]} ficou e em {v+1}° com o numero : {i[1]}.")
-    sleep(1)'''
+    sleep(1)
 
 # Exercício 92 - Cadastro de Trabalhador em Python
 # Crie um programa que leia nome, ano de nascimento e carteira de trabalho e cadastre-os (com idade) em um dicionário.
 # Se por acaso a CTPS for diferente de ZERO, o dicionário receberá também o ano de contratação e o salário.
 # Calcule e acrescente, além da idade, com quantos anos a pessoa vai se aposentar.
-'''from datetime import datetime
+from datetime import datetime
 cadastro = {}
 cadastro['Nome'] = str(input("Nome: "))
 date = int(input("Ano de nascimento: "))
@@ -60,14 +60,14 @@ else:
     cadastro['Aposentadoria'] = cadastro['Anos'] + ((cadastro['Contratado'] + 35) - datetime.now().year)
     print()
     for i,v in cadastro.items():
-        print(f"{i}: {v}")'''
+        print(f"{i}: {v}")
     
 # Exercício 93 - Cadastro de Jogador de Futebol
 # Crie um programa que gerencie o aproveitamento de um jogador de futebol.
 # O programa vai ler o nome do jogador e quantas partidas ele jogou.
 # Depois vai ler a quantidade de gols feitos em cada partida.
 # No final, tudo isso será guardado em um dicionário, incluindo o total de gols feitos durante o campeonato.
-'''partidas = list()
+partidas = list()
 jogador = dict()
 jogador['Nome'] = str(input("Digite o Nome do jogador: "))
 jogador['jogos'] = jogos = int(input("Quantos jogos ele jogou: "))
@@ -86,7 +86,7 @@ else:
     print("=="*20)
     print(f"O jogador {jogador["Nome"]} jogou {jogos}.")
     for i,v in enumerate(jogador["gols"]) :
-        print(f"Na partida {i} e fez {v} gols.")'''
+        print(f"Na partida {i} e fez {v} gols.")
 
 #Exercício 94 - Unindo Dicionários e Listas
 #Crie um programa que leia nome, sexo e idade de várias pessoas, guardando os dados de cada pessoa em um dicionário, e todos os dicionários em uma lista.
@@ -95,50 +95,50 @@ else:
 #B) A média de idade do grupo
 #C) Uma lista com todas as mulheres
 #D) Uma lista de pessoas com idade acima da média
-# pessoas = dict()
-# cadastros = list()
-# contador = 0
-# tidade = 0
+pessoas = dict()
+cadastros = list()
+contador = 0
+tidade = 0
 
-# while True:
-#     pessoas.clear()
-#     print(f"Cadastro N° {contador+1}.\n")
-#     pessoas["Nome"] = str(input("Nome: "))
-#     pessoas["Masculidade"] = " "
+while True:
+    pessoas.clear()
+    print(f"Cadastro N° {contador+1}.\n")
+    pessoas["Nome"] = str(input("Nome: "))
+    pessoas["Masculidade"] = " "
 
-#     while pessoas["Masculidade"] not in "MF":
-#         pessoas["Masculidade"] = str(input("Masculidade [M/F]: ")).strip().upper()[0]
-#         if pessoas["Masculidade"] not in "MF":
-#             print("Erro! Tente novamente.")
-#     continuar = " "
-#     pessoas["Idade"] = int(input("Idade: "))
-#     contador +=1
-#     tidade += pessoas["Idade"]
-#     cadastros.append(pessoas.copy())
-#     print()
+    while pessoas["Masculidade"] not in "MF":
+        pessoas["Masculidade"] = str(input("Masculidade [M/F]: ")).strip().upper()[0]
+        if pessoas["Masculidade"] not in "MF":
+            print("Erro! Tente novamente.")
+    continuar = " "
+    pessoas["Idade"] = int(input("Idade: "))
+    contador +=1
+    tidade += pessoas["Idade"]
+    cadastros.append(pessoas.copy())
+    print()
 
-#     while continuar not in "SN":
-#         continuar = str(input("Quer continuar [S/N]: ")).strip().upper()[0]
-#         if continuar not in "SN":
-#             print("Erro! Tente novamente.")
+    while continuar not in "SN":
+        continuar = str(input("Quer continuar [S/N]: ")).strip().upper()[0]
+        if continuar not in "SN":
+            print("Erro! Tente novamente.")
 
-#     if continuar == "N":
-#         break
-#     print("-="*15)
-# print("--"*15)
+    if continuar == "N":
+        break
+    print("-="*15)
+print("--"*15)
 
-# print(f"Quantidade de pessoas: {contador}.")
-# print(f"Media de idade: {tidade/contador:.2f}.")
+print(f"Quantidade de pessoas: {contador}.")
+print(f"Media de idade: {tidade/contador:.2f}.")
 
-# print(f"Mulheres: ",end="")
-# for pessoa in cadastros:
-#     if pessoa["Masculidade"] == "F":
-#         print(pessoa["Nome"],end=" ")
+print(f"Mulheres: ",end="")
+for pessoa in cadastros:
+    if pessoa["Masculidade"] == "F":
+        print(pessoa["Nome"],end=" ")
 
-# print(f"\nPessoas acima da idade de idade {tidade/contador:.2f}: ")
-# for pessoa in cadastros:
-#     if pessoa["Idade"] > (tidade/contador):
-#         print(f"Nome:{pessoa["Nome"]} -> Idade:{pessoa["Idade"]}")
+print(f"\nPessoas acima da idade de idade {tidade/contador:.2f}: ")
+for pessoa in cadastros:
+    if pessoa["Idade"] > (tidade/contador):
+        print(f"Nome:{pessoa["Nome"]} -> Idade:{pessoa["Idade"]}")
 
 # Exercício 95 - Aprimorando os Dicionários
 # Aprimore o desafio 93 para que ele funcione com vários jogadores, incluindo um sistema de visualização de detalhes do aproveitamento de cada jogador.
@@ -155,8 +155,10 @@ while True:
         jogador["Partidas"] = str("Não jogou.")
         jogador["gols"] = 0
     else:
+        jogador["gols"] = []
         for x in range(jogador["Partidas"]):
-            jogador["gols"] = int(input(f"Quantos gols no {x+1} jogo? R: "))
+            jogador["gols"].append(int(input(f"Quantos gols no {x+1} jogo? R: ")))
+    jogador["total"] = sum(jogador["gols"])
     jogadores.append(jogador.copy())
     continuar = " "
     print()
@@ -168,5 +170,21 @@ while True:
     if continuar == "N":
         break
 
-print(jogadores)
-#nao encerrado
+print("=-"*20)
+print(f"{'N°':<3}{'Nome':<10}{'Gols':<20}{'Total':<5}")
+for i,v in enumerate(jogadores):
+    print(f"{i:<3}{v["Nome"]:<10}{str(v["gols"]):<20}{v['total']:<5}")
+print("-="*20)
+
+while True:
+    escolha = " "
+    escolha = int(input("Qual jogador você quer ver ? Para encerrar digite 999. \nR: "))
+    if escolha == 999:
+        print("Encerrado.")
+        break
+    elif escolha >= len(jogadores):
+        print("Valor incorreto.")
+        print()
+    else:
+        print(jogadores[escolha])
+        print()
