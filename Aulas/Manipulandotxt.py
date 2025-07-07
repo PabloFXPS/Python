@@ -1,9 +1,9 @@
 frase = "Curso em Video Python"
-#print (len(frase)) #ver quantos caracteres tem
-#print(frase.count('o',0,13)) #quantas vezes apareceu O
-#print (frase.find('deo')) #onde começa essa sequencia de caracteres
-#print (frase.find('Android')) #retorna -1 se nao tiver
-#print('Curso' in frase ) #verifica se tem essa palavra na variavel
+print (len(frase)) #ver quantos caracteres tem
+print(frase.count('o',0,13)) #quantas vezes apareceu O
+print (frase.find('deo')) #onde começa essa sequencia de caracteres
+print (frase.find('Android')) #retorna -1 se nao tiver
+print('Curso' in frase ) #verifica se tem essa palavra na variavel
 
 #transformação
 
