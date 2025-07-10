@@ -1,6 +1,5 @@
-def separar():
+def separar(): 
     print("-="*20)
-    print()
     
 
 # Exercício Python 096:
@@ -62,3 +61,47 @@ print("Faça o seu agora: ")
 contador(i=int(input("Qual vai ser o inicio: ")),
          f=int(input("Qual o final: ")),
          p=int(input("De quantos em quantos: ")))
+
+# Exercício Python 099:
+# Faça um programa que tenha uma função chamada maior(), que receba vários parâmetros com valores inteiros.
+# Seu programa tem que analisar todos os valores e dizer qual deles é o maior.
+
+def maior(*num):
+    cont = maior = 0
+    for valor in num:
+        if cont == 0:
+            maior = valor
+        elif valor > maior:
+            maior = valor
+        cont +=1
+    print(f"O maior numero da sequencia {num} é {maior}.")
+    separar()
+
+maior(2,9,4,5,7,1)
+maior(4,7,0)
+maior(1,2)
+maior(6)
+maior()
+
+# Exercício Python 100:
+# Faça um programa que tenha uma lista chamada números e duas funções chamadas sorteia() e somaPar().
+# A primeira função vai sortear 5 números e vai colocá-los dentro da lista e a segunda função vai mostrar a soma entre todos os valores pares sorteados pela função anterior.
+
+def sortear(lista):
+    from random import sample
+    numeros = (sample(range(0,10),5))
+    print(f"O numeros sorteados: {numeros}")
+    lista.extend(numeros)
+
+def somarpar(lista):
+    npar = list()
+    par=0
+    for valor in lista:
+        if valor % 2 == 0:
+            par += valor
+            npar.append(valor)
+    print(f"A soma dos pares {npar} é {par}.")
+
+numeros = []
+sortear(numeros)
+somarpar(numeros)
