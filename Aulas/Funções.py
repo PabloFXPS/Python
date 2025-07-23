@@ -1,6 +1,3 @@
-from encodings.rot_13 import rot13
-
-
 def separar(): #Exemplo de uma função. Algo que vai precisar fazer várias vezes.
     print("-="*20)
 separar() #Não precisa colocar print, só chamar a função com () no final.
