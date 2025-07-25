@@ -54,3 +54,43 @@ print(f"RESULTADO: {test}")
 #103 - Faça um programa que tenha uma função chamada ficha(),
 #que receba dois parâmetros opcionais: o nome de um jogador e quantos gols ele marcou.
 #O programa deverá ser capaz de mostrar a ficha do jogador, mesmo que algum dado não tenha sido informado corretamente.
+def ficha(nome="",gols = ""):
+    """
+    :param nome: Recebe o nome do jogador.
+    :param gols: Recebe a quantidade de gols feito.
+    :return: n/a
+    """
+    if nome == "": nome = "<desconhecido>"
+    if gols.isnumeric():
+        gols = int(gols)
+    else:
+        gols=0
+    print(f"o jogador {nome} fez {gols} gol(s) no campeonato.")
+
+ficha(nome=str(input("Nome do jogador: ")),gols=input("Qual foi o números de gols: "))
+
+#104 - Crie um programa que tenha a função leiaInt(),
+#que vai funcionar de forma semelhante à função input() do Python,
+#só que fazendo a validação para aceitar apenas um valor numérico inteiro.
+def LeiaInt(num):
+    """
+    :param num: Recebe o valor digitado pelo usuário.
+    :return: Retorna o valor se ele for um número inteiro.
+    """
+    while True:
+        if num.isnumeric():
+            return int(num)
+        else:
+            print("\033[0;31mERRO 406. Tente Novamente com número inteiro.\033[m")
+            num = input("Digite um novo número: ")
+            print()
+n=LeiaInt(input("Digite um número: "))
+print(f"Você digitou o número {n}.")
+
+# 105 - Faça um programa que tenha uma função notas()
+#que pode receber várias notas de alunos e vai retornar um dicionário com as seguintes informações:
+# – Quantidade de notas
+# – A maior nota
+# – A menor nota
+# – A média da turma
+# – A situação (opcional)
