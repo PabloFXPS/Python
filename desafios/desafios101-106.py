@@ -88,9 +88,73 @@ n=LeiaInt(input("Digite um número: "))
 print(f"Você digitou o número {n}.")
 
 # 105 - Faça um programa que tenha uma função notas()
-#que pode receber várias notas de alunos e vai retornar um dicionário com as seguintes informações:
+# que pode receber várias notas de alunos e vai retornar um dicionário com as seguintes informações:
 # – Quantidade de notas
 # – A maior nota
 # – A menor nota
 # – A média da turma
 # – A situação (opcional)
+
+def notas(*n, sit=False):
+    """
+    Função para analisar as notas e situação de alunos.
+    :param n: Uma ou mais notas.
+    :param sit: Valor opcional, indicando se deve ou não mostrar a situacao.
+    :return: Dicionário com as informações.
+    """
+    nums = dict()
+    nums['Total'] = len(n)
+    nums['Maior'] = max(n)
+    nums['Menor'] = min(n)
+    nums['Media'] = sum(n)/len(n)
+    if sit:
+        if nums['Media'] >=8:
+            nums['Situação'] = 'Boa'
+        elif 5 <= nums['Media'] < 8:
+            nums['Situação'] = 'Razoável'
+        else:
+            nums['Situação'] = 'Ruim'
+    return nums
+
+resp=notas(8,9,7,sit=True)
+print(resp)
+
+#106 - Faça um mini-sistema que utilize o Interactive Help do Python.
+#O usuário vai digitar o comando e o manual vai aparecer.
+#Quando o usuário digitar a palavra ‘FIM’, o programa se encerrará. Importante: use cores.
+cores = [
+    '\033[m',      #0 Sem cor
+    '\033[1;31m',  #1 Vermelho
+    '\033[1;32m',  #2 Verde
+    '\033[1;33m',  #3 Amarelo
+    '\033[1;34m',  #4 Azul
+    '\033[1;35m',  #5 Roxo
+]
+
+def ajuda(com):
+    from time import sleep
+    titulo(f"Acessando o manual do comando '{com}'.", cor=4)
+    sleep(2)
+    print('\033[7m')
+    help(com)
+    print('\033[m')
+
+def titulo(msg, cor=0):
+    tam = len(msg) + 4
+    print(cores[cor], end='')
+    print("=" * tam)
+    print(f"  {msg}")
+    print("=" * tam)
+    print(cores[0], end='')
+
+comando = ''
+while True:
+    titulo("Sistema de ajuda HLPY > Digite 'Fim' para encerrar o programa.", cor=3)
+    print()
+    comando = str(input(f"{cores[2]}Função ou biblioteca > {cores[0]}"))
+    if comando.upper() == 'FIM':
+        break
+    else:
+        ajuda(comando)
+
+titulo("Encerrado!!! Volte sempre.", cor=1)
