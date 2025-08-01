@@ -14,4 +14,3 @@ def dobro(num):
 def metade(num):
     res = num / 2
     return res
-
