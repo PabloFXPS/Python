@@ -261,3 +261,13 @@ c) uma contagem personalizada
 111 -Crie um pacote chamado utilidadesCev que tenha dois módulos internos chamados moeda e dado. Transfira todas as funções utilizadas nos desafios 107, 108 e 109 para esse novo pacote, garantindo que tudo continue funcionando.
 
 112 - Dentro do pacote utilidadesCev que criamos no desafio 111, temos um módulo chamado dado. Crie uma função chamada leiaDinheiro() que funcione como a função input(), mas com validação, aceitando apenas valores que representem quantias monetárias.
+
+113 – Reescreva a função leiaInt() do desafio 104, incluindo agora a possibilidade da digitação de um número de tipo válido. Crie também uma função leiaFloat() com a mesma funcionalidade.
+
+114 – Crie um código em Python que teste se o site pudim.com está acessível pelo computador que está executando o script.
+
+115a – Crie um menu interativo modularizado que permita ao usuário escolher entre opções (como cadastrar uma pessoa ou listar pessoas), repetindo até que o usuário opte por sair.
+
+115b – Implemente no menu do exercício 115a a funcionalidade de gravar e ler dados utilizando arquivos de texto, de forma a armazenar e recuperar os cadastros.
+
+115c – Finalize o projeto criando um sistema completo e modular para cadastrar pessoas (nome e idade) em um arquivo de texto, permitindo cadastrar novas entradas e listar todas as pessoas cadastradas.
