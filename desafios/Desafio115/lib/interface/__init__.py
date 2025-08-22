@@ -1,3 +1,25 @@
+import os
+
+def pasta_cadastro(pasta):
+    nome_pasta = pasta
+    if not os.path.exists(nome_pasta):
+        os.makedirs(nome_pasta)
+        print("Pasta do cadastros criada.")
+    else:
+        print("Pasta de cadastros ja existente.")
+    return nome_pasta
+
+def mostrar_pacientes(pasta):
+    try:
+        caminho= f'{pasta}'
+        os.chdir(caminho)
+    except FileNotFoundError:
+        print("Pasta não encontrada!!")
+    for files in os.listdir():
+        if files.lower().endswith(".txt"):
+            nomes,_ = os.path.splitext(files)
+            print(nomes)
+
 def leiaint(msg):
     while True:
         from time import sleep
