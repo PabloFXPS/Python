@@ -15,10 +15,14 @@ def mostrar_pacientes(pasta):
         os.chdir(caminho)
     except FileNotFoundError:
         print("Pasta não encontrada!!")
-    for files in os.listdir():
-        if files.lower().endswith(".txt"):
-            nomes,_ = os.path.splitext(files)
-            print(nomes)
+    else:
+        cont = 1
+        cabecalho("Pacientes cadastrados")
+        for files in os.listdir():
+            if files.lower().endswith(".txt"):
+                nomes,_ = os.path.splitext(files)
+                print(f"{cont} - {nomes}")
+                cont +=1
 
 def leiaint(msg):
     while True:
