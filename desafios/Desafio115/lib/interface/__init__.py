@@ -11,7 +11,7 @@ def pasta_cadastro(pasta):
 
 def mostrar_pacientes(pasta):
     try:
-        caminho= f'{pasta}'
+        caminho = f'{pasta}'
         os.chdir(caminho)
     except FileNotFoundError:
         print("Pasta não encontrada!!")
@@ -23,6 +23,24 @@ def mostrar_pacientes(pasta):
                 nomes,_ = os.path.splitext(files)
                 print(f"{cont} - {nomes}")
                 cont +=1
+
+def novo_cadastro(Cpaciente):
+    raiz = os.getcwd()
+    os.chdir(Cpaciente)
+    print()
+    novc = str(input("Nome do Paciente: "))
+    idade = int(input("Idade: "))
+    sintomas = str(input("Sintomas do paciente: "))
+    try:
+        nov_cliente = novc + ".txt"
+        arquivo = open(nov_cliente,"x")
+        arquivo.write(f"Nome: {novc}\nIdade: {idade}\nSintomas: {sintomas}")
+        arquivo.close()
+    except FileExistsError:
+        print("Cadastro ja existente.")
+    else:
+        print("\nCadastrado com sucesso.")
+    os.chdir(raiz)
 
 def leiaint(msg):
     while True:

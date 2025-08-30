@@ -12,7 +12,7 @@ while True:
         mostrar_pacientes(np)
         sleep(3)
     elif resp==2:
-        print("Escolheu opção 2.")
+        novo_cadastro(np)
         sleep(2)
     elif resp==3:
         print()
@@ -22,3 +22,6 @@ while True:
 
 #115b – Implemente no menu do exercício 115a a funcionalidade de gravar e ler dados utilizando
 #arquivos de texto, de forma a armazenar e recuperar os cadastros.
+
+#115c – Finalize o projeto criando um sistema completo e modular para cadastrar pessoas
+#(nome e idade) em um arquivo de texto, permitindo cadastrar novas entradas e listar todas as pessoas cadastradas.
