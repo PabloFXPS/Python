@@ -10,6 +10,7 @@ def pasta_cadastro(pasta):
     return nome_pasta
 
 def mostrar_pacientes(pasta):
+    raiz = os.getcwd()
     try:
         caminho = f'{pasta}'
         os.chdir(caminho)
@@ -23,6 +24,7 @@ def mostrar_pacientes(pasta):
                 nomes,_ = os.path.splitext(files)
                 print(f"{cont} - {nomes}")
                 cont +=1
+                os.chdir(raiz)
 
 def novo_cadastro(Cpaciente):
     raiz = os.getcwd()

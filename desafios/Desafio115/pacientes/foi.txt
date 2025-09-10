@@ -1,0 +1,3 @@
+Nome: foi
+Idade: 20
+Sintomas: ada

@@ -1,0 +1,3 @@
+Nome: pablo
+Idade: 23
+Sintomas: dor de cabeça
