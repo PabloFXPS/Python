@@ -19,7 +19,7 @@ g1 = Gafanhoto()   #Instancia/cria a class. Faz g1 receber nome, idade. // Se ex
 g1.nome = "Maria" #Metodos // ingredientes.
 g1.idade = 18
 print(g1.mensagem())
-g1.aniversario() #Atributo -> ()
+g1.aniversario() #Metodo -> ()
 print(g1.mensagem(),"\n")
 
 g2 = Gafanhoto()
