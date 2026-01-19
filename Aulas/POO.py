@@ -26,3 +26,31 @@ g2 = Gafanhoto()
 g2.nome = "Mauro"
 g2.idade = 20
 print(g2.mensagem())
+
+#==================================================================================================================
+class Pessoa:
+    """
+    Essa classe cria uma pessoa, que tenha nome e idade.
+    """
+    def __init__(self,n = "",i = 0):
+        self.nome = n
+        self.idade = i
+
+    def aniversario(self):
+        self.idade = self.idade + 1
+
+    def mensagem(self):
+        return f"{self.nome} tem {self.idade} anos"
+
+    def __str__(self):
+        return f"{self.nome} tem {self.idade} anos"
+
+p1 = Pessoa(n="maria",i=17) #Metodo indicado
+p1.aniversario()
+print(p1.mensagem())
+
+print(p1.__doc__)
+print(p1) #Caso deixe só p1 o método __str__ retorna a mensagem que voce colocar la
+print(p1.__dict__)        #atributo: Retornam como dicionário
+print(p1.__getstate__())  #metodo: mesma coisa
+print(p1.__class__) #mostra a qual classa p1 pertence
