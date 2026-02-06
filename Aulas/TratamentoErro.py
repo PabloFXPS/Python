@@ -1,5 +1,5 @@
 #sintaxe: Erro de trocar letras ou mal formuladas.
-#primt(x) #NameError
+print(x) #NameError
 
 #Semantico: Podem estar bem formatadas, mas não fazer aquilo que o programador quer ou mesmo nada de útil.
 print(x) #NameError. X não foi declarado.

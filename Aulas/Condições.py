@@ -1,16 +1,16 @@
-'''temp = int(input("Quanto tempo tem seu carro? "))
+temp = int(input("Quanto tempo tem seu carro? "))
 if temp <=3:
     print ("Carro novo")
 else:
     print("Carro velho")
-print ("-FIM-") '''
+print ("-FIM-")
 
 #simplicaficado
-'''print ('carro'if temp <=3 else 'carro velho')'''
+print ('carro'if temp <=3 else 'carro velho')
 
 #testes
 
-'''nome = str(input("Qual seu nome? "))
+nome = str(input("Qual seu nome? "))
 if nome == 'Pablo':
     print('temos o mesmo nome.')
 print('ola {}'. format(nome))
@@ -22,7 +22,7 @@ print ('A sua media foi {:.1f}'.format(m))
 if m>=6.0:
     print ("Sua media esta boa.")
 else:
-    print("Sua media esta ruim")'''
+    print("Sua media esta ruim")
 
 #condições aninhadas: elif = else e if ou senao e se 
 
@@ -44,4 +44,18 @@ elif nome == 'ana' or nome == 'jessica' or nome == 'maria':
     print('{}belo nome feminino.{}'.format(cor['li'],limpar))
 else:
     print ('{}Seu nome é bem normal.{}'.format(cor['ama'],limpar))
-print('{}Ola {}{}, {}tenha um bom dia.{}'.format(cor['verm'],nome,limpar,cor['azul'],limpar)) 
+print('{}Ola {}{}, {}tenha um bom dia.{}'.format(cor['verm'],nome,limpar,cor['azul'],limpar))
+
+#Case ou caso
+
+opcao = int(input("Faça sua escolha 1 a 3: "))
+if 4 > opcao > 0:
+    match opcao:
+        case 1:
+            print(f"Escolheu a opção {opcao}.")
+        case 2:
+            print(f"Escolheu a opção {opcao}.")
+        case 3:
+            print(f"Escolheu a opção {opcao}.")
+else:
+    print("Escolha invalida. Tente novamente.")

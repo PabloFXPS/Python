@@ -60,7 +60,14 @@ for cont in range(0,5):
 
 for c,v in enumerate(valor):
     print(f"Na posição {c} tem {v}")
-print("fim") 
+print("fim")
+
+livros = ["Python","Java","C++"]
+livros.append("JavaScript")
+livros.remove("Java")
+livros[0]= "GO" #TROCA
+print(livros)
+print(len(livros))
 
 #copia e lista
 a = [3,4,5,6] #se vc colocar b=a ele vai fazer uma lição entre essas lista. Caso, vc mude B tambem vai mudar A
@@ -97,6 +104,7 @@ dados['sexo']= 'M'
 
 #apaga um ELEMENTO eo seu Valor
 del dados['idade']
+dados.pop('idade')
 
 #ex
 filme ={'titulo':'Star Wars','ano':1977,'diretor':'Georger Lucas'}
@@ -108,6 +116,8 @@ print(filme.keys()) # <- mostra os Valores titulo, ano, diretor
 
 #tudo junto
 print(filme.items())# <- mostra os valores e os elementos
+
+print(filme.get("Nota","Não tem essa chave."))#Busca a kye nota, se nao tiver retorna "Não tem essa chave"
 
 #laços de repetição 
 for k,v in filme.items():
