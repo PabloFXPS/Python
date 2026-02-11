@@ -141,3 +141,132 @@ for c in range (0,3):
     estado['sigla'] = str(input("Sigla: "))
     brasil.append(estado.copy()) #cria uma copia para nao ficar tudo igual
 print(brasil)
+
+# 🎯 Objetivo:
+# Criar um sistema simples e funcional que utilize tudo o que você aprendeu até agora em Python — como listas, dicionários, funções, loops e condicionais.
+# 🧠 O que seu programa deve fazer:
+# Exibir um menu com as opções:
+# 1. Adicionar aluno
+# 2. Listar todos os alunos
+# 3. Buscar aluno pelo nome
+# 4. Remover aluno
+# 5. Mostrar média geral das notas
+# 6. Sair
+
+# ✏️ Funcionalidades detalhadas:
+# ➕ Adicionar aluno
+# Pedir o nome, a idade e a nota (0 a 10) do aluno.
+# Salvar os dados em um dicionário.
+# Adicionar o dicionário a uma lista de alunos.
+
+# 📋 Listar todos os alunos
+# Mostrar todos os alunos cadastrados com nome, idade e nota.
+# Exibir mensagem se não houver nenhum aluno.
+
+# 🔍 Buscar aluno pelo nome
+# Perguntar um nome e procurar na lista.
+# Exibir os dados se o aluno for encontrado.
+# Se não existir, exibir uma mensagem de erro.
+
+# 🗑️ Remover aluno
+# Perguntar o nome do aluno.
+# Se existir, remover da lista.
+# Se não existir, exibir aviso.
+
+# 📊 Média geral das notas
+# Calcular e exibir a média de todas as notas dos alunos cadastrados.
+# Se não houver alunos, exibir uma mensagem adequada.
+
+# ✅ Requisitos técnicos:
+# Usar listas e dicionários para armazenar os dados.
+# Separar funcionalidades em funções.
+# Usar um loop principal com menu (while True) para manter o programa rodando até o usuário sair.
+# Validar entradas (por exemplo: nota deve ser um número entre 0 e 10).
+
+from time import sleep
+def adicionar (nome,idade,nota):
+    alunos.append({"Nome":nome.title(),"Idade":idade,"Nota":nota})
+
+def listagem():
+    if len(alunos) == 0:
+        print("Sem alunos.")
+        return
+    for aluno in alunos:
+        for chave, Valor in aluno.items():
+            print(f"{chave}:{Valor}")
+        print("-=" * 5)
+
+def buscar(nome,lista):
+    if len(lista) == 0:
+        print("Sem alunos.")
+        return
+    for aluno in lista:
+        if aluno["Nome"] == nome:
+            print("Aluno encontrado:")
+            return f"Aluno {aluno['Nome']} | Idade {aluno['Idade']} | Nota {aluno['Nota']}"
+    return f"{nome} Não encontrado."
+
+def apagar(nome,lista):
+    if len(lista) == 0:
+        print("Sem alunos.")
+        return
+    for i, aluno in enumerate(lista):
+        if aluno["Nome"] == nome:
+            (lista.pop(i))
+            return f"{nome} foi apagado."
+    return f"{nome} não encontrado."
+
+def media(lista):
+    if len(alunos) == 0:
+        print("Sem alunos.")
+        return
+    Cont = 0
+    notaTotal = 0
+    for b in lista:
+        for c, v in b.items():
+            if c == "Nota":
+                notaTotal += v
+                Cont += 1
+        return f"Nota geral {notaTotal} / quantidade de notas {Cont} / media {notaTotal / Cont}"
+    return f"Nem uma nota encontrada."
+
+
+alunos = list()
+while True:
+    sleep(1)
+    print("-=-=-=-=Interface-=-=-=-=")
+    escolha = int(input("Digite os numero para acessar:\n1-Novo cadastro || 2-Listar todos os alunos\n3-buscar pelo nome || 4-Remover aluno\n5-Mostrar media geral || 6-Sair"
+                        "\nEscolha: "))
+    match escolha:
+        case 1:
+            sleep(1)
+            continuar="S"
+            while continuar == "S":
+                print("\nCadastre o novo aluno:")
+                adicionar(str(input("Nome:")), int(input("Idade:")), int(input("Nota:")))
+                continuar = input(str("Deseja continuar[S/N]: ")).upper()
+            while continuar not in "SN":
+                print("Resposta invalida")
+                continuar = input(str("Deseja continuar[S/N]: ")).upper()
+        case 2:
+            sleep(1)
+            print("\n-=-=Listagem de todos os alunos-=-=")
+            listagem()
+        case 3:
+            sleep(1)
+            print("Digite o nome do aluno para buscar")
+            resultado = buscar(str(input("Nome: ")).title(),alunos)
+            print(resultado)
+        case 4:
+            sleep(1)
+            print("Digite o nome do aluno para remover")
+            apagado = apagar(str(input("Nome: ")).title(),alunos)
+            print(apagado)
+        case 5:
+            sleep(1)
+            print("Calculando a media geral:")
+            print(media(alunos))
+            print()
+        case 6:
+            print("Programa encerrado")
+            break
