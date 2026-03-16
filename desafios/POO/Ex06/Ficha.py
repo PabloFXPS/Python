@@ -1,0 +1,2 @@
+#Crie a classe Gamer, onde podemos cadastrar nome,nick e jogos favoritos de uma pessoa.
+#Crie também um método que permita mostrar a ficha desse gamer.

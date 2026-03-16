@@ -65,7 +65,7 @@ caixa=Panel("[white]Exemplo de painel[/]",title="Caixa",style="bold blue")
 print(caixa)
 
 from rich.table import Table #Cria tabelas
-tabela = Table(title="Tabela de Preço",)
+tabela = Table(title="Tabela de Preço")
 tabela.add_column("Nome",justify="left")
 tabela.add_column("Preço",justify="center")
 tabela.add_row("Lapis","R$1,60")
