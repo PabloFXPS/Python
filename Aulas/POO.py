@@ -55,6 +55,50 @@ print(p1.__dict__)        #atributo: Retornam como dicionário
 print(p1.__getstate__())  #metodo: mesma coisa
 print(p1.__class__) #mostra a qual classa p1 pertence
 
+#=====ABSTRAÇÃO=====  Ignorar o irrelevante e se focar estritamente no essencial
+#Existe a abstração de dados, que acontece quando ignoramos informações desnecessário para o escopo.
+#Existe a abstração de processos, quando não precisamos saber como um método faz seu trabalho, apenas sabe que ele existe pela interface.
+
+from abc import ABC, abstractmethod #Abstract Base Classes
+
+class PessoaAbstrata(ABC):
+    def __init__(self,nome="",idade=0):
+        self.nome = nome
+        self.idade = idade
+    
+    def aniversario(self):
+        self.idade += 1
+
+    @abstractmethod #As classes Filhos precisam ter esse metodo
+    def estudar(self):
+        pass
+
+class alunotest(PessoaAbstrata):
+    def __init__(self, nome="", idade=0):
+        self.nome=nome
+        self.idade=idade
+
+    def matricula(self):
+        print(f"{self.nome} Fez a matricula")
+    
+    def estudar(self):
+        print("Estudando história")
+
+class professor(PessoaAbstrata):
+    def __init__(self, nome="", idade=0):
+        self.nome=nome
+        self.idade=idade
+    
+    def aula(self):
+        print(f"Professor {self.nome} dando aula.")
+
+    # def estudar(self):  #Sem isso vai dar erro por ela ser um metodo abstrato
+    #     print(f"Estudando para o mestrado")
+
+a1 = alunotest("Alex",12)
+p1= professor("Marcos", 45)
+
+
 #======RICH======= Cores e emojis
 from rich import print
 print(f"Olá, [red]Mundo[/red]! :earth_americas:")
