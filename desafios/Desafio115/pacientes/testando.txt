@@ -1,3 +1,0 @@
-Nome: testando
-Idade: 33
-Sintomas:se nao deu erro esta ok

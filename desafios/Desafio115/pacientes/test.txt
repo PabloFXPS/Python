@@ -1,3 +1,0 @@
-Nome: test
-Idade: 23
-Sintomas:talvez um test
