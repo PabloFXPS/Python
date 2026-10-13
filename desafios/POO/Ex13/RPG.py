@@ -1,21 +1,26 @@
-#Você deve criar uma hierarquia com uma classe abstrata Polígono e subclasses como Quadrado e Círculo. Métodos como calcular_área e calcular_perímetro devem ser abstratos na classe mãe.
-#          ┌──────────────────────────┐
-#          │         POLÍGONO         │
-#          ├──────────────────────────┤
-#          │ - qtd_lados              │
-#          ├──────────────────────────┤
-#          │ # área()    {abstract}   │
-#          │ # perímetro() {abstract} │
-#          └────────────┬─────────────┘
-#                       │
-#             ┌─────────┴─────────┐
-#             │                   │
-#   ┌─────────▼─────────┐ ┌───────▼────────┐
-#   │      QUADRADO     │ │     CÍRCULO    │
-#   ├───────────────────┤ ├────────────────┤
-#   │ - lado            │ │ - raio         │
-#   ├───────────────────┤ ├────────────────┤
-#   │ + área()          │ │ + área()       │
-#   │ + perímetro()     │ │ + perímetro()  │
-#   └───────────────────┘ └────────────────┘
-
+#Simular um combate entre personagens onde um ataca o outro com dano baseado em sorte/dados. A classe abstrata Personagem gerencia vida e golpes, enquanto as subclasses Guerreiro e Mago implementam formas distintas de cura.
+# ┌──────────────────────────────────┐
+# │            PERSONAGEM            │
+# ├──────────────────────────────────┤
+# │ - nome                           │
+# │ - vida                           │
+# │ - ataque                         │
+# │ - defesa                         │
+# ├──────────────────────────────────┤
+# │ + atacar()                       │
+# │ + receber_dano()                 │
+# │ + curar()                        │
+# └────────────────┬─────────────────┘
+#                  │
+#           ┌──────┴───────┐
+#           │              │
+#           ▼              ▼
+# ┌────────────────┐ ┌────────────────┐
+# │    GUERREIRO   │ │      MAGO      │
+# ├────────────────┤ ├────────────────┤
+# │ - força        │ │ - poder_magico │
+# │ - armadura     │ │ - mana         │
+# ├────────────────┤ ├────────────────┤
+# │ + atacar()     │ │ + atacar()     │
+# │ + curar()      │ │ + curar()      │
+# └────────────────┘ └────────────────┘

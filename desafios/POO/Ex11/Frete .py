@@ -1,21 +1,21 @@
-#Você deve criar uma hierarquia com uma classe abstrata Polígono e subclasses como Quadrado e Círculo. Métodos como calcular_área e calcular_perímetro devem ser abstratos na classe mãe.
-#          ┌──────────────────────────┐
-#          │         POLÍGONO         │
-#          ├──────────────────────────┤
-#          │ - qtd_lados              │
-#          ├──────────────────────────┤
-#          │ # área()    {abstract}   │
-#          │ # perímetro() {abstract} │
-#          └────────────┬─────────────┘
-#                       │
-#             ┌─────────┴─────────┐
-#             │                   │
-#   ┌─────────▼─────────┐ ┌───────▼────────┐
-#   │      QUADRADO     │ │     CÍRCULO    │
-#   ├───────────────────┤ ├────────────────┤
-#   │ - lado            │ │ - raio         │
-#   ├───────────────────┤ ├────────────────┤
-#   │ + área()          │ │ + área()       │
-#   │ + perímetro()     │ │ + perímetro()  │
-#   └───────────────────┘ └────────────────┘
-
+#Desenvolver classes para calcular fretes baseados em distância para diferentes veículos: Moto (frete livre), Caminhão (mínimo de 50 km) e Drone (máximo de 10 km). A classe Transporte deve ser abstrata e definir o método calcular frete.
+# ┌─────────────────────────────────┐
+# │          TRANSPORTE             │
+# ├─────────────────────────────────┤
+# │ - distância                     │
+# │ - frete                         │
+# ├─────────────────────────────────┤
+# │ + calcular_frete() {abstract}   │
+# └───────────────┬─────────────────┘
+#                 │
+#         ┌───────┼─────────┐
+#         │       │         │
+#         ▼       ▼         ▼
+# ┌───────────┐ ┌───────────┐ ┌───────────┐
+# │   MOTO    │ │ CAMINHÃO  │ │   DRONE   │
+# ├───────────┤ ├───────────┤ ├───────────┤
+# │           │ │           │ │           │
+# ├───────────┤ ├───────────┤ ├───────────┤
+# │ + calcular│ │ + calcular│ │ + calcular│
+# │   _frete()│ │   _frete()│ │   _frete()│
+# └───────────┘ └───────────┘ └───────────┘
