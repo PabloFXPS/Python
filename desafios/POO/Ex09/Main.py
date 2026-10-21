@@ -1,9 +1,9 @@
 from Poligono import Circulo, Quadrado, triangulo
 
 def main():
-    p1 = Quadrado(12)
+    p1 = Quadrado(20)
     p2 = Circulo(12)
-    p3 = triangulo(12)
+    p3 = triangulo(20)
 
     p1.area()
     p1.perimetro()

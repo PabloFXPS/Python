@@ -41,10 +41,12 @@ class Quadrado(Poligono):
         self.qtd_lados = qtd_lados
 
     def area(self):
-        print(f"Quadrado - Área: {self.qtd_lados ** 2}")
+        resultado = self.qtd_lados ** 2
+        print(f"Quadrado - Área: {resultado}")
 
     def perimetro(self):
-        print(f"Quadrado - Perímetro: {self.qtd_lados *4}")
+        resultado = self.qtd_lados * 4
+        print(f"Quadrado - Perímetro: {resultado}")
 
 class Circulo(Poligono):
     def __init__(self, qtd_lados):
@@ -52,10 +54,12 @@ class Circulo(Poligono):
         self.qtd_lados = qtd_lados
 
     def area(self):
-        print(f"Circulo - Área: {pi * (self.qtd_lados ** 2)}")
+        resultado = pi * (self.qtd_lados ** 2)
+        print(f"Circulo - Área: {resultado:.1f}")
 
     def perimetro(self):
-        print(f"Circulo - Perímetro: {2*pi * self.qtd_lados}")
+        resultado = 2 * pi * self.qtd_lados
+        print(f"Circulo - Perímetro: {resultado:.1f}")
 
 class triangulo(Poligono):
     def __init__(self, qtd_lados):
@@ -63,9 +67,9 @@ class triangulo(Poligono):
         self.qtd_lados = qtd_lados
 
     def area(self):
-        print(f"Triângulo - Área: {(3 ** 0.5 / 4) * (self.qtd_lados ** 2)}")
+        resultado = (3 ** 0.5 / 4) * (self.qtd_lados ** 2)
+        print(f"Triângulo - Área: {resultado:.1f}")
 
     def perimetro(self):
-        print(f"Triângulo - Perímetro: {self.qtd_lados *3}")
-
-    
+        resultado = self.qtd_lados * 3
+        print(f"Triângulo - Perímetro: {resultado:.1f}")
